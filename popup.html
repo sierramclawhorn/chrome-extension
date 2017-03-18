@@ -4,14 +4,24 @@
     <title>Local Adoptable Pets</title>
     <style>
       body {
-        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
-        font-size: 100%;
-        /* avoid an excessively wide status text */
-        white-space: pre;
-        /*text-overflow: ellipsis;*/
-        overflow: auto;
-        width: 350px;
-        max-width: 500px;
+        font-family: Helvetica;
+        white-space: pre-wrap;
+        width: 300px;
+        overflow-y: scroll;
+        overflow: scroll;
+        background-color: #d3f2ff;
+        border: 1px solid black;
+        padding-left: 1%;
+        padding-right: 1%;
+      }
+      .intro {
+        font-size: 1.1em;
+        font-weight: bold;
+        text-align: center;
+      }
+      #petImg {
+        text-align: center;
+        width: 90%;
       }
     </style>
 
@@ -19,8 +29,13 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    Local Adoptable Pets:
+    <div class="intro">
+      Meet <span id="name"></span><br>
+      <img id="petImg" src="">
+    </div>
     <div id="petfinderInfo"></div>
+    <div id="petDesc"></div>
+    <div id="shelterContact"></div>
   </body>
 </html>
 

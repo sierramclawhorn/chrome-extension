@@ -8,19 +8,24 @@ var getResponse = function(location) {
         success : function(data) {              
             var result = '';
             var petfinder = data.petfinder;
-            var infoHTML = petfinder.pet.media.photos.photo[0]['$t'];
-            infoHTML += 'Name: ' + petfinder.pet.name['$t'];
-            infoHTML += 'Animal: ' + petfinder.pet.animal['$t'];
-            infoHTML += 'Breed: ' + petfinder.pet.breeds.breed['$t'];
-            infoHTML += 'Sex: ' + petfinder.pet.sex['$t'];
-            infoHTML += 'Age: ' + petfinder.pet.age['$t'];
-            infoHTML += 'Description: ' + petfinder.pet.description['$t'];
-            infoHTML += 'Phone: ' + petfinder.pet.contact.phone['$t'];
-            infoHTML += 'Email: ' + petfinder.pet.contact.email['$t'];
-            infoHTML += 'Location: ' + petfinder.pet.contact.city['$t'] + ', ' + petfinder.pet.contact.state['$t'];
+            var photo = petfinder.pet.media.photos.photo[0]['$t'];
+            photo = photo.substring(0, photo.length -7);
+            photo = photo + 'x.jpg';
+            var name = petfinder.pet.name['$t'];
+            var infoHTML = 'Animal: ' + petfinder.pet.animal['$t'] + '\n';
+            infoHTML += 'Breed: ' + petfinder.pet.breeds.breed['$t'] + '\n';
+            infoHTML += 'Sex: ' + petfinder.pet.sex['$t'] + '\n';
+            infoHTML += 'Age: ' + petfinder.pet.age['$t'] + '\n';
+            var petDescription = petfinder.pet.description['$t'];
+            var contactInfo = 'Phone: ' + petfinder.pet.contact.phone['$t'] + '\n';
+            contactInfo += 'Email: ' + petfinder.pet.contact.email['$t'] + '\n';
+            contactInfo += 'Location: ' + petfinder.pet.contact.city['$t'] + ', ' + petfinder.pet.contact.state['$t'];
             $('#petfinderInfo').html(infoHTML);
-            console.log(infoHTML);
-            return infoHTML;
+            $('#petImg').attr('src', photo);
+            console.log(photo);
+            $('#name').html(name);
+            $('#petDesc').html(petDescription);
+            $('#shelterontact').html(contactInfo);
         }
     });
   };
