@@ -22,7 +22,6 @@ var getResponse = function(location) {
             contactInfo += 'Location: ' + petfinder.pet.contact.city['$t'] + ', ' + petfinder.pet.contact.state['$t'];
             $('#petfinderInfo').html(infoHTML);
             $('#petImg').attr('src', photo);
-            console.log(photo);
             $('#name').html(name);
             $('#petDesc').html(petDescription);
             $('#shelterontact').html(contactInfo);
