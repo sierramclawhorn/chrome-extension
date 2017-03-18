@@ -8,17 +8,19 @@ var getResponse = function(location) {
         success : function(data) {              
             var result = '';
             var petfinder = data.petfinder;
-            var infoHTML = '<ul>';
-            infoHTML += '<li>';
-            infoHTML += '<strong>Description</strong><br>';
-            infoHTML += petfinder.pet.description['$t'];
-            infoHTML += '</li>';
-            infoHTML += '</li>';
-            infoHTML += '</ul>';
-            // return infoHTML;
+            var infoHTML = petfinder.pet.media.photos.photo[0]['$t'];
+            infoHTML += 'Name: ' + petfinder.pet.name['$t'];
+            infoHTML += 'Animal: ' + petfinder.pet.animal['$t'];
+            infoHTML += 'Breed: ' + petfinder.pet.breeds.breed['$t'];
+            infoHTML += 'Sex: ' + petfinder.pet.sex['$t'];
+            infoHTML += 'Age: ' + petfinder.pet.age['$t'];
+            infoHTML += 'Description: ' + petfinder.pet.description['$t'];
+            infoHTML += 'Phone: ' + petfinder.pet.contact.phone['$t'];
+            infoHTML += 'Email: ' + petfinder.pet.contact.email['$t'];
+            infoHTML += 'Location: ' + petfinder.pet.contact.city['$t'] + ', ' + petfinder.pet.contact.state['$t'];
             $('#petfinderInfo').html(infoHTML);
-            // $('#petfinderInfo').html(petfinder.pet.description['$t']);
-            console.log(petfinder);
+            console.log(infoHTML);
+            return infoHTML;
         }
     });
   };
