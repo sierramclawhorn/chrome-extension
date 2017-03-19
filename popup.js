@@ -26,7 +26,6 @@ var getResponse = function(location) {
             $('#petfinderInfo').html(infoHTML);
             $('#shelterContact').html(contactInfo);
             $('#petDesc').html(petDescription);
-            console.log(link)
         }
     });
   };
