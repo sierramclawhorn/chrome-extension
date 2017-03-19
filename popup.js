@@ -9,22 +9,24 @@ var getResponse = function(location) {
             var result = '';
             var petfinder = data.petfinder;
             var photo = petfinder.pet.media.photos.photo[0]['$t'];
-            photo = photo.substring(0, photo.length -7);
-            photo = photo + 'x.jpg';
+            photo = photo.substring(0, photo.length -7) + 'x.jpg';
             var name = petfinder.pet.name['$t'];
+            var link = 'https://www.petfinder.com/petdetail/' + petfinder.pet.id['$t'];
             var infoHTML = 'Animal: ' + petfinder.pet.animal['$t'] + '\n';
             infoHTML += 'Breed: ' + petfinder.pet.breeds.breed['$t'] + '\n';
             infoHTML += 'Sex: ' + petfinder.pet.sex['$t'] + '\n';
             infoHTML += 'Age: ' + petfinder.pet.age['$t'] + '\n';
-            var petDescription = petfinder.pet.description['$t'];
             var contactInfo = 'Phone: ' + petfinder.pet.contact.phone['$t'] + '\n';
             contactInfo += 'Email: ' + petfinder.pet.contact.email['$t'] + '\n';
             contactInfo += 'Location: ' + petfinder.pet.contact.city['$t'] + ', ' + petfinder.pet.contact.state['$t'];
-            $('#petfinderInfo').html(infoHTML);
+            var petDescription = petfinder.pet.description['$t'];
+            $('.name').html(name);
             $('#petImg').attr('src', photo);
-            $('#name').html(name);
+            $('#petLink').attr('href', link)
+            $('#petfinderInfo').html(infoHTML);
+            $('#shelterContact').html(contactInfo);
             $('#petDesc').html(petDescription);
-            $('#shelterontact').html(contactInfo);
+            console.log(link)
         }
     });
   };

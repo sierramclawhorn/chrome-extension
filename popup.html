@@ -10,18 +10,41 @@
         overflow-y: scroll;
         overflow: scroll;
         background-color: #d3f2ff;
-        border: 1px solid black;
-        padding-left: 1%;
-        padding-right: 1%;
       }
       .intro {
-        font-size: 1.1em;
+        font-family: 'Times New Roman';
+        font-size: 3em;
         font-weight: bold;
+        text-align: center;
+        background-color: #ffc88e;
+        color: #d3f2ff;
+        width: 110vw;
+        margin-left: -8%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        border-top: 1px dashed black;
+        border-bottom: 1px dashed black;
+        text-shadow: 2px 2px #fcb064;
+      }
+      #photo {
         text-align: center;
       }
       #petImg {
+        width: 95%;
+        border: 1px black solid;
+      }
+      #linkDiv {
+        margin-top: -3%;
         text-align: center;
-        width: 90%;
+        background-color: #ffc88e;
+        width: 110vw;
+        margin-left: -8%;
+      }
+      #linkDiv a {
+        color: black;
+      }
+      #linkDiv a:hover {
+        color: #d3f2ff;
       }
     </style>
 
@@ -29,13 +52,14 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <div class="intro">
-      Meet <span id="name"></span><br>
-      <img id="petImg" src="">
+    <div class="intro">Meet <span class="name"></span></div>
+    <div id="photo"><img id="petImg" src=""></div>
+    <div id="linkDiv">
+      <a id="petLink" href="">click here to learn more about <span class="name"></span></a>
     </div>
     <div id="petfinderInfo"></div>
-    <div id="petDesc"></div>
     <div id="shelterContact"></div>
+    <div id="petDesc"></div>
   </body>
 </html>
 
