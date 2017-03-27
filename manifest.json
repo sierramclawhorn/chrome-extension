@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Local Adoptable Pets",
-  "description": "This extension shows an adoptable pet near you!",
+  "name": "Adoptable Pets",
+  "description": "This extension gives you a new adoptable animals with every click",
   "version": "0.1.0",
   "author": "Sierra McLawhorn",
 
