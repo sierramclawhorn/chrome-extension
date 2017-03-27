@@ -1,5 +1,5 @@
-var getResponse = function(location) {
-  var url = 'http://api.petfinder.com/pet.getRandom?key=' + 'fe1c3608eef3a014392be43230072267' + '&location=' + location + '&output=basic' + '&format=json' ;
+var getResponse = function() {
+  var url = 'http://api.petfinder.com/pet.getRandom?key=' + 'fe1c3608eef3a014392be43230072267' + '&output=basic' + '&format=json' ;
     $.ajax({
         type : 'GET',
         data : {},
@@ -30,4 +30,4 @@ var getResponse = function(location) {
     });
   };
 
-  getResponse('94110');
+  getResponse();
