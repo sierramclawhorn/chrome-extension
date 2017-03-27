@@ -1,30 +1,30 @@
 <!doctype html>
 <html>
   <head>
-    <title>Local Adoptable Pets</title>
+    <title>Adoptable Animals</title>
     <style>
       body {
         font-family: Helvetica;
         white-space: pre-wrap;
-        width: 300px;
+        width: 340px;
         overflow-y: scroll;
         overflow: scroll;
-        background-color: #90dbc6;
+        background-color: #6a5e81;
       }
       .intro {
-        font-family: 'Times New Roman';
+        font-family: 'Futura';
         font-size: 3em;
         font-weight: bold;
         text-align: center;
-        background-color: #f4868a;
-        color: #90dbc6;
+        background-color: #c2a0bf;
+        color: #6a5e81;
         width: 110vw;
         margin-left: -8%;
         padding-top: 4%;
         padding-bottom: 4%;
-        border-top: 1px dashed black;
-        border-bottom: 1px dashed black;
-        text-shadow: 2px 2px #ff4c52;
+        border-top: 1px dashed #20375b;
+        border-bottom: 1px dashed #20375b;
+        text-shadow: 2px 2px #f7c655;
       }
       #photo {
         text-align: center;
@@ -36,18 +36,42 @@
       #linkDiv {
         margin-top: -3%;
         text-align: center;
-        background-color: #f4868a;
+        background-color: #c2a0bf;
         width: 110vw;
         margin-left: -8%;
+        font-weight: bold;
+        font-size: 1.3em;
+        font-family: "PT Serif",serif;
+        letter-spacing: 0.5px;
       }
       #linkDiv a {
-        color: black;
+        color: #20375b;
       }
       #linkDiv a:hover {
-        color: #90dbc6;
+        color: #f7c655;
       }
       #petDesc {
         font-size: 1.2em;
+        margin-top: -40px;
+        color: #ffeabf;
+      }
+      .allInfo .left {
+        float: left;
+        width: 38%;
+        overflow: scroll;
+        padding-right: 1px;
+        color: #f2c97d;
+      }
+      .allInfo .right {
+        float: right;
+        width: 60%;
+        overflow: scroll;
+        padding-left: 2px;
+      }
+      .allInfo {
+        margin-top: -45px;
+        letter-spacing: 0.5px;
+        line-height: 1.8em;
       }
     </style>
 
@@ -60,9 +84,15 @@
     <div id="linkDiv">
       <a id="petLink" href="">click here to learn more about <span class="name"></span></a>
     </div>
-    <div id="petfinderInfo"></div>
-    <div id="shelterContact"></div>
-    <div id="petDesc"></div>
+    <div class='allInfo'>
+      <div class='left'>
+        <div id="petfinderInfo"></div>
+        <div id="shelterContact"></div>
+      </div>
+      <div class='right'>
+        <div id="petDesc"></div>
+      </div>
+    </div>
   </body>
 </html>
 
