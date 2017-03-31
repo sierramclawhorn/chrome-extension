@@ -2,4 +2,5 @@
 Download: https://chrome.google.com/webstore/detail/adoptable-pets/eobhliicjbpfbpedjemajncjoghfpfmk
 
 Find a new adoptable animal with every click
-[https://ibb.co/kFJc1F]
+
+![screenshot](https://ibb.co/kFJc1F)
